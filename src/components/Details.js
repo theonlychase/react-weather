@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row } from 'react-bootstrap';
-import Loading from './Loading.js';
 import Moment from 'react-moment';
-import api from '../utils/api';
 import {convertTemp} from '../utils/helpers';
 
 class Details extends Component {
@@ -36,7 +34,7 @@ class Details extends Component {
 		return (
 			<Grid>
 				<Row>
-					<img style={img} src={require('../assets/images/weather-icons/' + weather[0].icon + '.svg')} />
+					<img style={img} alt='' src={require('../assets/images/weather-icons/' + weather[0].icon + '.svg')} />
 					<h2 style={subHeader}><Moment format="dddd MMMM DD" unix>{dt}</Moment></h2>
 					<h2 style={cityName}>{city}</h2>
 					<h2 style={subHeader}>{weather[0].description}</h2>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; 
 import { Link }  from "react-router-dom";
-import { Form, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Form, FormGroup, FormControl } from 'react-bootstrap';
 
 class WeatherForm extends Component {
 	constructor(props) {
@@ -12,7 +12,6 @@ class WeatherForm extends Component {
 
 	handleSubmit = (event) => {
 		event.preventDefault();
-		console.log("current state", this.state.location);
 		this.props.onSubmit(
 	      this.state.location
 	    );
@@ -30,10 +29,6 @@ class WeatherForm extends Component {
 		var match = this.props.match,
 		    location = this.state.location;
 
-		const btn = {
-		  background: '#5cb85c',
-		  color: '#fff'
-		};
 		return (
 			<Form onSubmit={this.handleSubmit}>
 		      <FormGroup>
@@ -45,7 +40,7 @@ class WeatherForm extends Component {
 		      </FormGroup>
 		      
 	          <Link
-	            className='btn btn-success btn-lg'
+	            className={!location ? 'btn btn-success btn-lg disabled' : 'btn btn-success btn-lg'}
 	            to={{
 	              pathname: match.url + 'forecast',
 	              search: '?city=' + location

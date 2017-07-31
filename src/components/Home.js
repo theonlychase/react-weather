@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import WeatherForm from './WeatherForm.js';
-import Forecast from './Forecast.js';
 
 class Home extends Component {
 	constructor(props) {
@@ -18,7 +17,6 @@ class Home extends Component {
 	}
 
 	render() {
-		var location = this.state.location;
 		return (
 			<Grid>
 				<Row>

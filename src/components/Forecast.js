@@ -19,7 +19,6 @@ class Forecast extends Component {
 		var location = queryString.parse(this.props.location.search);
 		api.getWeather(location.city)
 			.then(function(data) {
-				console.log("data2", data);
 				this.setState({
 					results: data,
 					loading: false

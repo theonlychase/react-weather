@@ -23,8 +23,7 @@ class Weather extends Component {
 		    {weather} = this.props.result,
 		    result = this.props.result,
 		    {dt} = this.props.result,
-		    name = this.props.name,
-		     match = this.props.match;
+		    name = this.props.name;
 
 		var img = {
 			display: 'block',
@@ -45,7 +44,7 @@ class Weather extends Component {
 			              pathname: '/details/' + name,
 			              state: result
 		            }}>
-		              <img style={img} onClick={this.handleSubmit} src={require('../assets/images/weather-icons/' + weather[0].icon + '.svg')} />
+		              <img style={img} alt='' onClick={this.handleSubmit} src={require('../assets/images/weather-icons/' + weather[0].icon + '.svg')} />
 		          	</Link>
 					<h2 style={subHeader}><Moment format="dddd MMMM DD" unix>{dt}</Moment></h2>
 				</div>

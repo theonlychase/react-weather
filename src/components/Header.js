@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap';
+// import { Navbar, FormGroup, FormControl, Button } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render() {
-    const btn = {
-      background: '#5cb85c',
-      color: '#fff'
-    };
+    // const btn = {
+    //   background: '#5cb85c',
+    //   color: '#fff'
+    // };
 
     return (
       <Navbar>
@@ -18,6 +19,7 @@ class Header extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
+        { /*
         <Navbar.Form pullRight>
           <FormGroup>
             <FormControl bsSize="lg" type="text" placeholder="Search" />
@@ -25,6 +27,7 @@ class Header extends Component {
           {' '}
           <Button style={btn} type="submit">Get Weather</Button>
           </Navbar.Form>
+        */ }
         </Navbar.Collapse>
       </Navbar>
     );
