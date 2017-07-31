@@ -24,7 +24,7 @@ class Home extends Component {
 				<Row>
 					 <Col md={4}></Col>
 					 <Col md={4} className="text-center">
-					 <h2>Enter A City and State</h2>
+					 <h2>Enter A City</h2>
 					 	<WeatherForm match={this.props.match} onSubmit={this.handleSubmit}/>
 					 </Col>
 				   <Col md={4}></Col>

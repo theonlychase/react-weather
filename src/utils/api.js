@@ -11,6 +11,14 @@ var api = {
 			console.log("data is: ", city.data);
 			return city.data;
 		});
+	},
+
+	getForecast: function(location) {
+		return axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + location + params)
+		.then(function(city) {
+			console.log("new city" + city.data);
+			return city.data;
+		});
 	}
 }
 

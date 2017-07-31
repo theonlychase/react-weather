@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import { Grid, Row } from 'react-bootstrap';
 import Weather from './Weather.js';
 import Loading from './Loading.js';
